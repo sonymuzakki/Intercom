@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('divisi', function (Blueprint $table) {
-            $table->id('id');
+            $table->id('idd');
             $table->string('divisi');
 
             // $table->foreignId('id_users');

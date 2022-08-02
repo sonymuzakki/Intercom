@@ -15,15 +15,6 @@ class UsersController extends Controller
         // dd($data);
         return view('administrator.formusers', compact('data'));
     }
-    // $data = users::find($id_users);
-        // // $data->delete();
-        // $data->delete();
-        // return redirect('data.datausers')->with('toast_success', 'Data Berhasil Dihapus');
-
-        // $data =users::where('id_users')->delete();
-
-        // return redirect()->route('datausers',compact('data'));
-
     public function tambah(Request $request) {
         // dd($request->all());
 
@@ -36,13 +27,26 @@ class UsersController extends Controller
 
         return view('data.datausers',compact('data'));
     }
-    public function delete($id){
+        public function delete($id){
         $users = users::find($id);
         $users->delete();
         return redirect()->route('datausers')->with('success','Data Berhasil di Delete');
     }
-    public function details($id){
+    // public function details($id_users){
+    //     $data = users::find($id_users);
+    //     return view ('data.datausersdetails',compact ('data'));
+    // }
+    public function details($id)
+    {
         $data = users::find($id);
+        // dd($data);
         return view ('data.datausersdetails',compact ('data'));
     }
+    public function update(Request $request , $id)
+    {
+        $data = users::find($id);
+        $data->update($request->all());
+        return view ('data.datausers',compact ('data'));
+    }
+
 }

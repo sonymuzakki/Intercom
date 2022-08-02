@@ -13,18 +13,16 @@ class users extends Model
     protected $table ='users_itc';
     protected $guarded;
 
-    // public function divisi(){
-    //     return $this->hasOne(divisi::class,'id','id');
-    // }
-
     public function divisi(){
-        return $this->hasOne(divisi::class,'id','id');
+        return $this->hasOne(divisi::class,'idd','idd');
     }
-    // public function lokasi(){
-    //     return $this->hasOne(lokasi::class,'idl','id');
-    // }
 
     public function lokasi(){
-        return $this->hasOne(lokasi::class,'idl','id');
+        return $this->hasOne(lokasi::class,'idl','idl');
+    }
+
+    public function inventory(){
+
+        return $this->hasOne(inventory::class);
     }
 }

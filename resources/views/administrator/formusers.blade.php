@@ -24,7 +24,7 @@
                             </div>
                             <div class="mb-3">
                                 <label  for="ExampleInputEmail" class="form-label">Divisi</label>
-                                <select class="form-control" name="id" aria-label="Default Select example">
+                                <select class="form-control" name="idd" aria-label="Default Select example">
                                   <option>Select Option ..</option>
                                   <option value="1">Umum</option>
                                   <option value="2">Admin</option>

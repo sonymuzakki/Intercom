@@ -15,9 +15,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('users_itc', function (Blueprint $table) {
-            $table->bigIncrements('id_users');
+            $table->bigIncrements('id');
             $table->string('nama');
-            $table->foreignId('id')->cascade('delete');
+            $table->foreignId('idd')->cascade('delete');
             $table->foreignId('idl')->cascade('delete');
             $table->timestamps();
             // $table->foreign('id_mahasiswa')->references('id')->on('mahasiswas');

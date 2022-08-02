@@ -49,16 +49,17 @@
                 <tr>
                 <th scope="row">{{ $data->firstItem() + $key }} </th>
                 <td>{{$row->nama}}</td>
-                <td>{{$row->divisi->divisi}}</td>
-                <td>{{$row->lokasi->lokasi}}</td>
+                <td>{{ $row->divisi->divisi }}</td>
+                <td>{{ $row->lokasi->lokasi }}</td>
                 <td>
                     <div class="btn-group" role="group" aria-label="Basic example">
-                        <a href="/details/{{ $row->id }}" type="button" class="btn btn-primary"><i class="fa-solid fa-info"></i></a>
+                        {{--  <a href="/details/{{ $row->id_users}}" type="button" class="btn btn-primary"><i class="fa-solid fa-info"></i></a>  --}}
+                        <a href="/details/{{ $row->id }}" class="btn btn-primary"><i class="fa-solid fa-info"></i></a>
                     </div>
                 </td>
                 <td>
                     <div class="btn-group" role="group" aria-label="Basic example">
-                        <a href="" type="button" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i> Edit</a>
+                        <a href="/updateuser/ {{ $row->id }}" type="button" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i> Edit</a>
                         <a href="/delete/ {{ $row->id }}" type="button" class="btn btn-primary"><i class="fa-solid fa-trash-can"></i> Hapus</a>
                     </div>
                 </td>

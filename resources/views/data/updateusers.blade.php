@@ -17,7 +17,7 @@
             <div class="col-8">
                 <div class="card">
                     <div class="card-body">
-                        <form action="/details/{{ $data->id }}" method="POST" enctype="multipart/form-data">
+                        <form action="/updateusers/ {{ $data->id }}" method="POST" enctype="multipart/form-data">
                         @csrf
 
                         <div class="mb-3">
@@ -26,7 +26,7 @@
                         </div>
                         <div class="mb-3">
                             <label  for="ExampleInputEmail" class="form-label">Divisi</label>
-                            <select class="form-control" aria-label="Default Select example" >
+                            <select class="form-control" aria-label="Default Select example" value="{{ $data->idd }}">
                               <option selected> {{ $data->divisi->divisi }}</option>
                               <option value="PC">PC</option>
                               <option value="Laptop">Laptop</option>
@@ -34,13 +34,13 @@
                         </div>
                         <div class="mb-3">
                             <label  for="ExampleInputEmail" class="form-label">Lokasi</label>
-                            <select class="form-control" aria-label="Default Select example" >
+                            <select class="form-control" aria-label="Default Select example" value="{{ $data->idl }}">>
                               <option selected> {{ $data->lokasi->lokasi }}</option>
                               <option value="PC">PC</option>
                               <option value="Laptop">Laptop</option>
                             </select>
                         </div>
-
+                        <button type="submit" class="btn btn-success btn-lg mb-2 mt-3"</button>Submit</button>
                     </form>
                     {{--  <div class="d-grid gap-2 d-md justify-content-md-end">
                         <button type="submit" class="btn btn-success btn-lg mb-2  justify-content-lg-end"</button>Submit</button>
@@ -52,9 +52,11 @@
 
                 </div>
                 <div class="d-md-flex justify-content-md-end mb-2 ">
+
+                    {{--  <button type="submit" class="btn btn-success btn-lg mb-2 mt-3"</button>Submit</button>  --}}
                     {{--  <a href="" type="button" class="btn btn-primary"><i class=""></i> Hapus</a>
                     <button type="but   ton" class="btn btn-success btn-lg ms-2  justify-content-lg-end"</button>Submit</button>  --}}
-                    <a href="/datausers" type="button" class="btn btn-primary btn-lg mb-2"><i class="fa-solid fa-backward"></i> Back</a>
+                    {{--  <a href="/datausers" type="button" class="btn btn-primary btn-lg mb-2"><i class="fa-solid fa-backward"></i> Back</a>  --}}
                     {{--  <a href="/updateusers" type="button" class="btn btn-warning btn-lg mb-2"><i class="fa-solid fa-pen-to-square"></i> Back</a>  --}}
                     {{--  <a type="submit" class="btn btn-warning btn-lg mb-2  justify-content-lg-end"</button><i class="fa-solid fa-pen-to-square"></i> Edit</a>  --}}
                   </div>

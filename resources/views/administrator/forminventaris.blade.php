@@ -25,32 +25,28 @@
                             </div>
                             <div class="col">
                                 <label  for="ExampleInputEmail" class="form-label">Lokasi</label>
-                                <select class="form-control" name="divisi" aria-label="Default Select example">
-
-                                  @foreach ($datas as $lokasi )
-                                  <option>Select Option ..</option>
-                                  <option value="1">{{ $lokasi->lokasi->lokasi }}</option>
-                                  <option value="2">{{ $lokasi->lokasi->lokasi }}</option>
-                                  <option value="3">{{ $lokasi->lokasi->lokasi }}</option>
-                                  <option value="4">{{ $lokasi->lokasi->lokasi }}</option>
-                                  <option value="5">{{ $lokasi->lokasi->lokasi }}</option>
-                                  @endforeach
-
-
+                                <select class="form-control" name="id_users" aria-label="Default Select example">
+                                        <option>Select Option ..</option>
+                                        <option value="1">Head Office</option>
+                                        <option value="2">Body&Paint</option>
+                                        <option value="3">Bengkel</option>
+                                        <option value="4">Payakumbuh</option>
+                                        <option value="5">Dharmasraya</option>
+                                        <option value="6">Pasaman Barat</option>
                                 </select>
                             </div>
                             <div class="col">
                                 <label  for="ExampleInputEmail" class="form-label">Divisi</label>
-                                <select class="form-control" name="divisi" aria-label="Default Select example">
-
-                                    @foreach ($datas as $divisi)
+                                <select class="form-control" name="id_users" aria-label="Default Select example">
+{{--
+                                    @foreach ($datas as $divisi)  --}}
                                     <option>Select Option ..</option>
-                                    <option value="1">{{ $divisi }}</option>
-                                    <option value="2">{{ $divisi }}</option>
-                                    <option value="3">{{ $divisi }}</option>
-                                    <option value="4">{{ $divisi }}</option>
-                                    <option value="5">{{ $divisi }}</option>
-                                    @endforeach
+                                  <option value="1">Umum</option>
+                                  <option value="2">Admin</option>
+                                  <option value="3">Body&Paint</option>
+                                  <option value="4">Bengkel</option>
+                                  <option value="5">Sales</option>
+                                    {{--  @endforeach  --}}
 
 
                                 </select>
@@ -78,7 +74,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Graphic</label>
-                                <input type="text" class="form-control" name="graphic" id="exampleFormControlInput1" placeholder="">
+                                <input type="text" class="form-control" name="grafik" id="exampleFormControlInput1" placeholder="">
                             </div>
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Hardisk</label>
@@ -107,7 +103,7 @@
                             </div>
                             <div class="mb-3">
                                 <label  for="ExampleInputEmail" class="form-label">Office</label>
-                                <select class="form-control" name="isLegalos" aria-label="Default Select example">
+                                <select class="form-control" name="office" aria-label="Default Select example">
                                   <option>Select Option ..</option>
                                   <option value="1">365</option>
                                   <option value="2">OHS 2019</option>
@@ -120,24 +116,24 @@
                             </div>
                             <div class="mb-3">
                                 <label  for="ExampleInputEmail" class="form-label">Internet</label>
-                                <select class="form-control" name="isLegalos" aria-label="Default Select example">
+                                <select class="form-control" name="internet" aria-label="Default Select example">
                                   <option>Select Option ..</option>
                                   <option value="1">Yes</option>
                                   <option value="2">No</option>
                                 </select>
                             </div>
                             <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label">Ip Addres</label>
-                                <input type="text" class="form-control" name="internet" id="exampleFormControlInput1" placeholder="">
+                                <label for="exampleFormControlInput1" class="form-label">Company Email</label>
+                                <input type="text" class="form-control" name="companyemail" id="exampleFormControlInput1" placeholder="">
                             </div>
-                            <div class="mb-3">
+                            {{--  <div class="mb-3">
                                 <label  for="ExampleInputEmail" class="form-label">IAMS</label>
                                 <select class="form-control" name="iams" aria-label="Default Select example">
                                   <option>Select Option ..</option>
                                   <option value="1">Yes</option>
                                   <option value="2">NO</option>
                                 </select>
-                            </div>
+                            </div>  --}}
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">User Account</label>
                                 <input type="text" class="form-control" name="useraccount" id="exampleFormControlInput1" placeholder="">

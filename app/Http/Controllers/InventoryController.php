@@ -10,9 +10,8 @@ class InventoryController extends Controller
 {
     public function input()
     {
-        $data = Inventory::all();
-        $datas = users::all();
-        return view ('administrator.forminventaris',compact('data','datas'));
+        $data = Inventory::with('users','lokasi','divisi');
+        return view ('administrator.forminventaris',compact('data'));
     }
 
     // public function tambah(Request $request)
@@ -23,13 +22,19 @@ class InventoryController extends Controller
     //     return redirect()->route('data.datainven');
     // }
 
-    // public function tambah(){
-    //     $data = users::all();
-    //     return view('data.datainven',compact('data'));
-    // }
+    public function tambah(Request $request){
+        $data =Inventory::with('users','lokasi','divisi');
+        // $data = users::all();
+        // dd($data);
+        inventory::create($request->all());
+        return Redirect()->route('datainven',compact ('data'));
+        // return view('data.datainven',compact('data'));
+    }
 
     public function datainven() {
-        $data = Inventory::paginate(10);;
+        $data = Inventory::paginate(10);
+        // dd($data);
         return view('data.datainven',compact('data'));
+
     }
 }

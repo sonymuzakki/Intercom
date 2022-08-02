@@ -12,6 +12,7 @@ class inventory extends Model
 
     public function users()
     {
-        return $this->hasOne(users::class, 'id_users');
+        return $this->belongsTo (users::class, 'id_users','id');
     }
+
 }

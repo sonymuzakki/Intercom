@@ -24,7 +24,7 @@
 
             <div class="table-responsive">
             <table class="table table-striped">
-                <a href="/input"  class="btn btn-primary mb-2"><i class="fa-solid fa-plus"></i> Tambah Data</a>
+                <a href="/forminventaris"  class="btn btn-primary mb-2"><i class="fa-solid fa-plus"></i> Tambah Data</a>
 
             <thead>
             {{--  @if ( $message = Session::get('success' ))
@@ -34,8 +34,6 @@
             @endif  --}}
             <th scope="col" class="position col-sm-1 ">No</th>
                 <th scope="col">Pengguna</th>
-                {{--  <th scope="col">Lokasi</th>
-                <th scope="col">Divisi</th>  --}}
                 <th scope="col">Lokasi</th>
                 <th scope="col">Divisi</th>
                 <th scope="col">Hostname</th>
@@ -66,19 +64,27 @@
                 @foreach ($data as $key => $row)
                 <tr>
                 <th scope="row">{{ $data->firstItem() + $key }} </th>
-                <td>{{$row->users->nama}}</td>
-                {{--  <td>{{  }}</td>
-                <td>{{  }}</td>  --}}
-                <td>{{$row->lokasi->lokasi}}</td>
-                <td>{{$row->divisi->divisi}}</td>
-                <td>{{$row->hostname}}</td>
+                <td>{{ $row->users->nama }}</td>
+                <td>{{$row->users}}</td>
+                <td>{{ $row->users }}</td>
+                <td>{{ $row->hostname }}</td>
+                <td>{{ $row->jenis }}</td>
+                <td>{{ $row->merk }}</td>
                 <td>{{$row->processor}}</td>
                 <td>{{$row->ram}}</td>
-                <td>{{$row->graphic }}</td>
+                <td>{{$row->grafik }}</td>
                 <td>{{$row->hardisk}}</td>
                 <td>{{$row->ssd}}</td>
                 <td>{{$row->os}}</td>
-                <td>
+                <td>{{$row->isLegalOs}}</td>
+                <td>{{$row->office}}</td>
+                <td>{{$row->akunoffice}}</td>
+                <td>{{$row->internet}}</td>
+                <td>{{$row->ipaddress}}</td>
+                <td>{{$row->IAMS}}</td>
+                <td>{{$row->useraccount}}</td>
+                <td>{{$row->anydeskId}}</td>
+                {{--  <td>
                     <div class="btn-group" role="group" aria-label="Basic example">
                         <a href="/details/ {{ $row->id }}" type="button" class="btn btn-primary"><i class="fa-solid fa-info"></i></a>
                     </div>
@@ -88,7 +94,7 @@
                         <a href="/edit/ {{ $row->id }}" type="button" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></a>
                         <a href="/delete/ {{ $row->id }}" type="button" class="btn btn-primary"><i class="fa-solid fa-trash"></i></a>
                       </div>
-                </td>
+                </td>  --}}
 
             </tr>
             @endforeach

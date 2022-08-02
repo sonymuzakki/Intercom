@@ -31,7 +31,9 @@ Route::post('/tambahdata', [InventoryController::class,'tambah'])->name('tambahd
 Route::get('/formusers', [UsersController::class,'index'])->name('formusers');
 Route::post('/tambahusers', [UsersController::class,'tambah'])->name('tambahusers');
 Route::get('/delete/{id}', [UsersController::class,'delete'])->name('delete');
-Route::get('/details/{id}', [UsersController::class,'details'])->name('details');
+Route::get('/details/{id}',[UsersController::class,'details'])->name('details');
+Route::post('/updateusers/{id}',[UsersController::class,'update'])->name('updateusers');
+Route::get('/updateuser/{id}',[UsersController::class,'update'])->name('updateusers');
 
 // Route::post('/tambahusers', [UsersController::class,'tambahusers'])->name('tambahusers');
 
